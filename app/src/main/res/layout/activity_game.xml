@@ -28,16 +28,14 @@
             android:id="@+id/tussen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="46dp"
-            android:layout_marginLeft="46dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginRight="48dp"
+            android:layout_alignParentTop="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="171dp"
+            android:layout_marginRight="171dp"
             android:layout_marginBottom="64dp"
-            android:layout_toStartOf="@+id/score2"
-            android:layout_toLeftOf="@+id/score2"
-            android:layout_toEndOf="@+id/score1"
-            android:layout_toRightOf="@+id/score1"
             android:text=":"
             android:textSize="40sp" />
 
@@ -190,18 +188,44 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="80dp">
 
         <Button
             android:id="@+id/newgame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nieuw spel" />
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Nieuw spel"
+            android:background="#128370"
+            android:textColor="#ffff"
+            android:textSize="25sp"/>
+
+        <LinearLayout
+            android:layout_width="3dp"
+            android:layout_height="0dp">
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Home"
+            android:background="#128370"
+            android:textColor="#ffff"
+            android:textSize="25sp"/>
+
     </LinearLayout>
 
 </LinearLayout>
