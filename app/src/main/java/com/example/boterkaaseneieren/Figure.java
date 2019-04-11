@@ -1,7 +1,9 @@
 package com.example.boterkaaseneieren;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 public class Figure extends AppCompatActivity {
@@ -11,5 +13,10 @@ public class Figure extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_figure);
+    }
+
+    protected void toGameActivity(View view){
+        Intent gameIntent = new Intent(this, Game.class);
+        startActivity(gameIntent);
     }
 }
