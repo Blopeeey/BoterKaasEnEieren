@@ -11,7 +11,6 @@ import android.widget.Spinner;
 
 public class Figure extends AppCompatActivity {
 
-    public Button spelen;
     public String val_speler1;
     public String val_speler2;
 
@@ -37,15 +36,11 @@ public class Figure extends AppCompatActivity {
 
         val_speler1 = speler1.getSelectedItem().toString();
         val_speler2 = speler2.getSelectedItem().toString();
-
-        spelen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent s = new Intent(Figure.this, Game.class);
-                s.putExtra("speler1", val_speler1);
-                s.putExtra("speler2", val_speler2);
-                startActivity(s);
-            }
-        });
+    }
+    protected void toGameActivity(View view){
+        Intent gameIntent = new Intent(this, Game.class);
+        gameIntent.putExtra("speler1", val_speler1);
+        gameIntent.putExtra("speler2", val_speler2);
+        startActivity(gameIntent);
     }
 }

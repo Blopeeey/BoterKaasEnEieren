@@ -41,6 +41,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/rectangle"
+        android:onClick="toGameActivity"
         android:text="Spelen"
         android:textColor="#fff"
         android:textSize="24sp"
