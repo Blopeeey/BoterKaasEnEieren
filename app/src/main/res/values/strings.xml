@@ -2,8 +2,8 @@
     <string name="app_name">BoterKaasEnEieren</string>
 
     <string-array name="speler1">
-        <item>C</item>
-        <item>C</item>
+        <item>O</item>
+        <item>S</item>
         <item>U</item>
         <item>Q</item>
     </string-array>
