@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">BoterKaasEnEieren</string>
+
+    <string-array name="speler1">
+        <item>O</item>
+        <item>Y</item>
+        <item>U</item>
+        <item>Q</item>
+    </string-array>
+
+    <string-array name="speler2">
+        <item>X</item>
+        <item>A</item>
+        <item>Y</item>
+        <item>G</item>
+    </string-array>
 </resources>
