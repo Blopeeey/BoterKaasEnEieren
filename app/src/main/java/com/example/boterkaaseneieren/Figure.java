@@ -6,9 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class Figure extends AppCompatActivity {
+
+    public Button spelen;
+    public String val_speler1;
+    public String val_speler2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +35,17 @@ public class Figure extends AppCompatActivity {
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         speler2.setAdapter(myAdapter2);
 
-        String val_speler1 = speler1.getSelectedItem().toString();
-        String val_speler2 = speler2.getSelectedItem().toString();
+        val_speler1 = speler1.getSelectedItem().toString();
+        val_speler2 = speler2.getSelectedItem().toString();
 
-        Intent s1 = new Intent(this, Game.class);
-        s1.putExtra("speler1", val_speler1);
-
-        Intent s2 = new Intent(this, Game.class);
-        s2.putExtra("speler2", val_speler2);
-    }
-
-    protected void toGameActivity(View view){
-        Intent gameIntent = new Intent(this, Game.class);
-        startActivity(gameIntent);
+        spelen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent s = new Intent(Figure.this, Game.class);
+                s.putExtra("speler1", val_speler1);
+                s.putExtra("speler2", val_speler2);
+                startActivity(s);
+            }
+        });
     }
 }
