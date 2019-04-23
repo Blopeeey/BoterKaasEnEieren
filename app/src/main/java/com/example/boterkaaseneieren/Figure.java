@@ -29,6 +29,15 @@ public class Figure extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.speler2));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         speler2.setAdapter(myAdapter2);
+
+        String val_speler1 = speler1.getSelectedItem().toString();
+        String val_speler2 = speler2.getSelectedItem().toString();
+
+        Intent s1 = new Intent(this, Game.class);
+        s1.putExtra("speler1", val_speler1);
+
+        Intent s2 = new Intent(this, Game.class);
+        s2.putExtra("speler2", val_speler2);
     }
 
     protected void toGameActivity(View view){

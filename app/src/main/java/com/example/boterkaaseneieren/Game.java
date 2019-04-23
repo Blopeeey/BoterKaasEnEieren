@@ -56,13 +56,18 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent in = getIntent();
+        Bundle b = in.getExtras();
+        String speler1 =(String) b.get("speler1");
+        String speler2 =(String) b.get("speler2");
+
         if (!((Button) v).getText().toString().equals("")) {
             return;
         }
         if (player1Turn) {
-            ((Button)v).setText("X");
+            ((Button)v).setText(speler1);
         } else {
-            ((Button)v).setText("O");
+            ((Button)v).setText(speler2);
         }
         roundCount++;
 
